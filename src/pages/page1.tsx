@@ -2,12 +2,7 @@ import LogoTopLeft from "../components/logo_topleft.tsx";
 import BackgroundSquares from "../components/background_squres.tsx";
 import './page1.css';
 import {useState} from "react";
-import {
-    bit_of_a_bad_story,
-    could_allow,
-    i_dont_know_how_meaningful,
-    i_think_we_chose, uh_november
-} from "../utils/images.ts";
+import { group_text } from "../utils/images.ts";
 
 const Page1 = () => {
     const [step, setStep] = useState<number>(0);
@@ -18,14 +13,12 @@ const Page1 = () => {
         <>
             <BackgroundSquares/>
             <div className="center-text">
-                <div className="justify-center">As social creatures,</div>
+                <div className="justify-center-wide">
+                    This project began with a simple archive:
+                    <br/>
+                    <br/>
+                    the text messages between myself and a person from my past.</div>
                 <br/>
-                <div style={{
-                    "height": "20px"
-                }}/>
-                <div className="justify-center">
-                    humans are naturally inclined to seek out connections with others.
-                </div>
             </div>
         </>
 
@@ -33,11 +26,10 @@ const Page1 = () => {
         <>
             <BackgroundSquares/>
             <div className="center-text">
-                <div className="justify-center">And yet,<br/>we often face barriers such as</div>
+                <div className="justify-center-wide">Untangling emotions can be really difficult,</div>
                 <br/>
-                <div className="justify-center">the fear of the unknown</div>
+                <div className="justify-center">parsing data can be a bit easier.</div>
                 <br/>
-                <div className="justify-center">and misdirection.</div>
             </div>
         </>
 
@@ -45,38 +37,41 @@ const Page1 = () => {
         <>
             <BackgroundSquares/>
             <div className="center-text">
-                <div className="justify-center-wide">This project emanates from the universal desire to articulate feelings perfectly through a number of ways—</div>
+                <div className="justify-center-wide">
+                    What emerged was an experiment in digital haunting—
+                    <br/><br/>
+                    a Large Language Model (LLM) trained on our correspondence
+                    <br/><br/>
+                    to generate words we never wrote,
+                </div>
                 <br/>
-                <div className="justify-center-wide">timing, phrasing, delivery.</div>
+                <br/>
+                <div className="justify-center-wide">the conversations we might have had.</div>
             </div>
         </>
-
 
     const step4 =
         <>
             <BackgroundSquares/>
             <div className="center-text">
-                <div className="justify-center-wide">Through the medium of unsent letters, a mosaic of emotions and unspoken words is formed.</div>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    width: '40vw',
-                    alignItems: 'center'
-                }}>
-                    <img src={i_think_we_chose} style={{maxWidth: '50%'}}/>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                    }}>
-                        <img src={could_allow} style={{maxWidth: '30%', height: 'fit-content'}}/>
-                        <img src={bit_of_a_bad_story} style={{maxWidth: '60%'}}/>
-                    </div>
-                    <img src={i_dont_know_how_meaningful} style={{maxWidth: '60%'}}/>
-                    <img src={uh_november} style={{maxWidth: '60%'}}/>
+                <div className="justify-center-wide">
+                    As a séance in code, this project takes
+                    <br/><br/>
+                    the corpus of a failed romance:
+                    <br/><br/>
+                </div>
+                <br/>
+                <div className="justify-center-wide">
+                    texts brittle with longing,
+                    <br/><br/>
+                    coarse from unresolved fights
+                </div>
+                <br/>
+                <br/>
+                <div className="justify-center-wide">
+                    and runs it through an LLM like a deck of tarot cards.
                 </div>
             </div>
-
         </>
 
 
@@ -84,11 +79,53 @@ const Page1 = () => {
         <>
             <BackgroundSquares/>
             <div className="center-text">
-                <div className="justify-center-wide">This project seeks to reveal unspoken sentiments and assemble the elusive, </div>
+                <div className="justify-center-wide">Rather than a prediction, the output becomes a possession.</div>
                 <br/>
-                <div className="justify-center">”perfect letter”</div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    width: '40vw',
+                    alignItems: 'center'
+                }}>
+                    <img src={group_text} style={{maxWidth: '60%'}}/>
+                </div>
+            </div>
+
+        </>
+
+
+    const step6 =
+        <>
+            <BackgroundSquares/>
+            <div className="center-text">
+                <div className="justify-center-wide">
+                    The machine spits back messages we might’ve written,
+                    <br/><br/>
+                    conversations we almost had,
+                    <br/><br/>
+                    alternate timelines where we were kinder, or crueler,
+                </div>
                 <br/>
-                <div className="justify-center">from my life, and yours.</div>
+                <br/>
+                <div className="justify-center">or simply different.</div>
+            </div>
+        </>
+
+    const step7 =
+        <>
+            <BackgroundSquares/>
+            <div className="center-text">
+                <div className="justify-center-wide">
+                    It’s an electronic artefact of a relationship
+                    <br/><br/>
+                    transformed into a ouija board,
+                </div>
+                <br/><br/>
+                <div className="justify-center">
+                    where the cursor flickers between
+                    <br/><br/>
+                    <i>then</i> and <i>what if.</i>
+                </div>
             </div>
         </>
 
@@ -97,7 +134,7 @@ const Page1 = () => {
         <div className={`${shouldFadeOut ? 'fade-out-page' : 'fade-in-page'}`}>
             <LogoTopLeft/>
             <div className='next-button' onClick={() => {
-                if(step<4) {
+                if(step<6) {
                     setStep(prevStep => prevStep+1);
                     setTimeout(() => {
                         setViewStep(prevViewStep => prevViewStep+1);
@@ -134,6 +171,16 @@ const Page1 = () => {
             {viewStep==4 &&
                 <div className={step != 4 ? 'fade-out-page' : 'fade-in-page'}>
                     {step5}
+                </div>
+            }
+            {viewStep==5 &&
+                <div className={step != 5 ? 'fade-out-page' : 'fade-in-page'}>
+                    {step6}
+                </div>
+            }
+            {viewStep==6 &&
+                <div className={step != 6 ? 'fade-out-page' : 'fade-in-page'}>
+                    {step7}
                 </div>
             }
         </div>

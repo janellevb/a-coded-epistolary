@@ -3,7 +3,7 @@ import './logo_topleft.css';
 
 
 const LogoTopLeft = () => {
-    return <div style={{zIndex: "99999"}}>
+    return <div style={{position: 'absolute', zIndex: "99999"}}>
         <img src={images.dear1} className="dear1"/>
         <img src={images.dear2} className="dear2"/>
         <img src={images.underline} className="underline"/>

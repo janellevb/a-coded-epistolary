@@ -16,7 +16,7 @@ interface TextItem {
 	page: number;
 }
 
-const numberOfPages = 20;
+const numberOfPages = 19;
 const heightBlocks = Math.floor(window.innerHeight/70)
 const widthBlocks = Math.floor(window.innerWidth/70)
 
@@ -75,10 +75,6 @@ const GalleryPage = () => {
 		{ text: images.its_been_a_long_time_since, initialY: utils.get25PercentFromTop()+150, initialX: utils.getMiddleX(1), shouldPin: false, page: 18 },
 		{ text: images.say_something_new, initialY: utils.get25PercentFromTop()+250, initialX: utils.getMiddleX(1), shouldPin: false, page: 18 },
 		{ text: images.also_nobody, initialY: utils.get25PercentFromTop()+350, initialX: utils.getMiddleX(1), shouldPin: false, page: 18 },
-		{ text: images.it_isnt_a_conversation, initialY: utils.get25PercentFromTop()+350, initialX: utils.getMiddleX(1), shouldPin: false, page: 19 },
-		{ text: images.sometimes_we_should_just, initialY: utils.get25PercentFromTop()+350, initialX: utils.getMiddleX(1), shouldPin: false, page: 19 },
-		{ text: images.you_want_to_be_perceived, initialY: utils.get25PercentFromTop()+350, initialX: utils.getMiddleX(1), shouldPin: false, page: 19 },
-		{ text: images.but_are_too_lazy, initialY: utils.get25PercentFromTop()+350, initialX: utils.getMiddleX(1), shouldPin: false, page: 19 },
 	]);
 	const [leftRightCounter, setLeftRightCounter] = useState<number>(0);
 	const [hideTextBank, setHideTextBank] = useState<boolean>(true);
@@ -218,7 +214,7 @@ const GalleryPage = () => {
 				zIndex: 10
 			}}>
 				<div className={`text ${showArrowGuide ? '' : 'fadeOut'}`}>
-		  [click the arrow to explore more memories]
+					[click to<br/>explore more<br/>generated memories]
 				</div>
 		<img
 			src={arrowRight}
@@ -331,7 +327,7 @@ const GalleryPage = () => {
 				setTimeout(() => {
 					window.location.href = '/a-coded-epistolary/#page1'
 				}, 400)
-			}}><u>click here</u></span> to know more]
+			}}><u>click here</u></span> to learn more]
 			</div>
 		</div>
 	);

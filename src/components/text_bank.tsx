@@ -25,29 +25,36 @@ const CurvedBox = styled.div<{$hideTextBank?: boolean}>`
 `;
 
 const Content = styled.div`
-  padding: 10px;
   color: white;
   text-align: center;
 `;
 
 const TextBank = ({callback}: TextBankProps) => {
 	const [hideTextBank, setHideTextBank] = useState<boolean>(true);
-
 	return (
 		<CurvedBox
 			$hideTextBank={hideTextBank}
 		>
 			<Content>
-				<img
-					src={drag_icon}
-					style={{
-						scale: '62%'
-					}}
-					onClick={() => {
-						setHideTextBank(prevValue => !prevValue);
-						callback?.call(null)
-					}}
-				/>
+				<div style={{
+					width: '70vw',
+					height: '39px',
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+				}}
+				 onClick={() => {
+					 setHideTextBank(prevValue => !prevValue);
+					 callback?.call(null)
+				 }}
+				>
+					<img
+						src={drag_icon}
+						style={{
+							scale: '62%'
+						}}
+					/>
+				</div>
 			</Content>
 		</CurvedBox>
 	);

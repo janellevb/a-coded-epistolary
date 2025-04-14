@@ -32,6 +32,7 @@
     font-family: "GeistMono Light", "serif";
     color: #8B0000;
     cursor: pointer;
+    z-index: 1;
 }
 
 .top-right-text-page1 {

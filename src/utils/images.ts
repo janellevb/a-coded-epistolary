@@ -53,7 +53,7 @@ import want_to_grab from '../assets/images/want-to-grab.png';
 import want_to_talk from '../assets/images/want-to-talk.png';
 import dear1 from '../assets/images/dear1.png';
 import dear2 from '../assets/images/dear2.png';
-import the_coded_epistolary from '../assets/images/a-coded-epistolary.png';
+import the_coded_epistolary from '../assets/images/the-coded-epistolary.png';
 import underline from '../assets/images/underline.png';
 import kind_of_minimised from '../assets/images/kind-of-minimised.png';
 import in_short_minimised from '../assets/images/in-short-minimised.png';
@@ -72,8 +72,10 @@ import you_want_to_be_perceived from '../assets/images/you-want-to-be-perceived.
 import but_are_too_lazy from '../assets/images/but-are-too-lazy.png';
 import a_coded_epistolary from '../assets/images/a-coded-epistolary.png';
 import underline_big from '../assets/images/underline-big.png';
+import group_text from '../assets/images/group-text.png'
 
 export {
+	group_text,
 	underline_big,
 	a_coded_epistolary,
 	its_been_a_long_time_since,
